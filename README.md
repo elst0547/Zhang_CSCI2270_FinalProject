@@ -1,5 +1,5 @@
 # Zhang_CSCI2270_FinalProject
-**Project	Summary**
+####**Project	Summary**
 Using the data structure stack to convert infix expression to reverse polish notation expression and do calculation
 ####**How	to	Run**
 ####**Dependencies**
