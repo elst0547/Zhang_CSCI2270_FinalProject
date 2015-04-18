@@ -1,6 +1,6 @@
 # Zhang_CSCI2270_FinalProject
 ####**Project	Summary**
-TBD
+A calculator that does calculation by converting infix expressions to reverse polish expressions
 ####**How	to	Run**
 ####**Dependencies**
 We are not using any third-party library. All you need is a c++ compiler that supports the standard libraries and standard template libraries(which the compiler is supposed to).
