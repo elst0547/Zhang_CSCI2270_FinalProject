@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include <cstdio>
-#include "Stack.h"
 #include "Zcal.h"
 using namespace std;
 
