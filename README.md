@@ -9,6 +9,9 @@ We are not using any third-party library. All you need is a c++ compiler that su
 
 
     g++ -std=c++11 main.cpp Zcal.cpp RPolish.cpp  // this is an example for g++
+    
+    
+see wiki of this project here: [Wiki](https://github.com/Pezhin/Zhang_CSCI2270_FinalProject/wiki)
 ####**System	Requirements**
 Works on windows, mac and linux
 ####**Group	Members**
