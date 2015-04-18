@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-   
+    cout << "This file is to help you test the calculator". << endl;
     for(;;)
     {
         puts("Please input you expression here");
