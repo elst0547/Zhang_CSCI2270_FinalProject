@@ -186,5 +186,5 @@ void Zcal::doCalc(RPolish rpn){
         value = stod(calcStack.pop());
         
     }
-    cout << value << endl;
+    cout << "The result is " << value << endl;
 }
