@@ -7,7 +7,6 @@
  */
 #ifndef Zcal_Zcal_h
 #define Zcal_Zcal_h
-
 #include <math.h>
 #include "RPolish.h"
 using namespace plzstd;

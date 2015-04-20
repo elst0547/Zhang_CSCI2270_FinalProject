@@ -8,8 +8,8 @@
 #ifndef Stack_H
 #define Stack_H
 #include <iostream>
+#include <string>
 using namespace std;
-
 template<class T>
 class Stack
 {

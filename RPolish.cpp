@@ -9,8 +9,8 @@
 #include "RPolish.h"
 
 //using Shunting-yard algorithm from wikipedia;
-
-/*********************************************
+/*
+********************************************
  While there are tokens to be read:
  1. Read a token.
  2. If the token is a number, then add it to the output queue.
@@ -30,7 +30,8 @@
  If the operator token on the top of the stack is a parenthesis, then there are mismatched parentheses.
  Pop the operator onto the output queue.
  9.Exit.
- **********************************************/
+ *********************************************
+ */
 using namespace plzstd;
 RPolish::RPolish(){
     
@@ -39,7 +40,7 @@ RPolish::RPolish(string exp){
     expression = exp;
 }
 RPolish::~RPolish(){
-    
+//TODO  
 }
 void RPolish::setExp(string exp)
 {
@@ -50,14 +51,16 @@ void RPolish::clearStack()
     output.clear();
     oprt.clear();
 }
-bool RPolish::isOperator(char input){
+//decide if the input is an operator
+inline bool RPolish::isOperator(char input){
     
     if(input == '+' || input == '-' || input == '/' || input == '*'
        || input == '!' || input == '%' || input == '=' || input == '^') return 1;
     
     return 0;
 }
-bool RPolish::isLeftAssoc(char input){
+//decide if the operator is left-associative
+inline bool RPolish::isLeftAssoc(char input){
     if(input == '+' || input == '-' || input == '/' || input == '*' || input == '%')
     {
         return 1;
@@ -85,6 +88,8 @@ void RPolish::change(){
     oprt.clear();
     change(expression);
 }
+// convert infix expression to postfix 
+// using the shunting-yard algorithm above
 void RPolish::change(std::string exp){
     for(int i = 0 ; i < exp.length() ; i++ )
     {
@@ -160,8 +165,6 @@ void RPolish::change(std::string exp){
         }
         
     }
-    
-    
     while(!oprt.empty()){
         if(oprt.top() == ')' || oprt.top() == '('){
             cout << "Parentheses mismatched" << endl;

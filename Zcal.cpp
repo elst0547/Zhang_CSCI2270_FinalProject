@@ -56,6 +56,21 @@ void Zcal::doCalc(string expression){
     RPo.change();
     doCalc(RPo);
 };
+// Wikipedia url: 
+//      http://en.wikipedia.org/wiki/Reverse_Polish_notation
+// using postfix algorithms to do the calculation
+// if the token is a value(number)
+//      push it into the stack
+// Otherwise, the token is an operator
+// It's known a priori that the operator takes n arguments;
+// If there are fewer than n values on the stack
+//      (Error) The user has not input sufficient values 
+//              in the expression.
+//Else, Pop the top n values from the stack.
+//Evaluate the operator, with the values as arguments.
+//Push the returned results, if any, back onto the stack.
+//If there is only one value in the stack
+//  That value is the result of the calculation.
 
 void Zcal::doCalc(RPolish rpn){
     Stack<string> tempStack = rpn.output;
