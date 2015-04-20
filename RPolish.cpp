@@ -167,8 +167,8 @@ void RPolish::change(std::string exp){
             cout << "Parentheses mismatched" << endl;
             exit(-1);
         }
-        char topOPt = oprt.pop();
-        string teOPT(1,topOPt);
-        output.push(teOPT);
+        char topOne = oprt.pop();
+        string opt(1,topOne);
+        output.push(opt);
     }
 }
