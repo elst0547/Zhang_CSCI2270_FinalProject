@@ -20,6 +20,7 @@ public:
     T pop();
     inline bool empty();
     int size();
+    
     void clear();
     void printAll();
     void push(T value);
@@ -29,7 +30,7 @@ private:
     T* store;
     int index;
     int cap;
-    void isFull();
+    void capFull();
 };
 
 //Default constructor
@@ -50,7 +51,7 @@ template <class T>
 T Stack<T>::top()
 {
     if(index == 0){
-        cout<< "stack is empty";
+        cout<< "stack is empty" << endl;
         return 0;
     }
     return store[index-1];
@@ -78,13 +79,13 @@ inline bool Stack<T>::empty()
 template <class T>
 void Stack<T>::push(T val)
 {
-    isFull();
+    capFull();
     store[index++]=val;
 }
 
 //double the capacity if the stack is full;
 template <class T>
-void Stack<T>::isFull()
+void Stack<T>::capFull()
 {
     if(index >= cap)
     {
