@@ -26,12 +26,11 @@ namespace plzstd {
         void change();
         void setExp(string);
         void clearStack();
-        Stack<char> oprt;
-        Stack<string> num;
         bool isOperator(char);
         bool isLeftAssoc(char);
         int optPri(char);
-        
+        Stack<char> oprt; // storing opeartors
+        Stack<string> output;// output stack 
     private:
         string expression;
         void change(std::string);

@@ -47,7 +47,7 @@ void RPolish::setExp(string exp)
 }
 void RPolish::clearStack()
 {
-    num.clear();
+    output.clear();
     oprt.clear();
 }
 bool RPolish::isOperator(char input){
@@ -81,7 +81,7 @@ int RPolish::optPri(char input)
     return 0;
 }
 void RPolish::change(){
-    num.clear();
+    output.clear();
     oprt.clear();
     change(expression);
 }
@@ -101,9 +101,9 @@ void RPolish::change(std::string exp){
             
         }
         if(temp.empty()){
-            num.push(temp);
+            output.push(temp);
         }else if(isNumber){
-            num.push(temp);
+            output.push(temp);
         }
         if (isOperator(exp[i]))
         {
@@ -119,7 +119,7 @@ void RPolish::change(std::string exp){
                         
                         flag = 0;
                         string opt(1, oprt.pop());
-                        num.push(opt);
+                        output.push(opt);
                     }else{
                         
                         break;
@@ -150,7 +150,7 @@ void RPolish::change(std::string exp){
                     
                     string opt(1, topOP);
                     oprt.pop();
-                    num.push(opt);
+                    output.push(opt);
                 }
             }
             if(!PM){
@@ -169,6 +169,6 @@ void RPolish::change(std::string exp){
         }
         char topOPt = oprt.pop();
         string teOPT(1,topOPt);
-        num.push(teOPT);
+        output.push(teOPT);
     }
 }

@@ -58,7 +58,7 @@ void Zcal::doCalc(string expression){
 };
 
 void Zcal::doCalc(RPolish rpn){
-    Stack<string> tempStack = rpn.num;
+    Stack<string> tempStack = rpn.output;
     while(!tempStack.empty())
     {
         expressionStack.push(tempStack.pop());
