@@ -83,13 +83,27 @@ int RPolish::optPri(char input)
         return 1;
     return 0;
 }
+// to call the private function change(std::string)
 void RPolish::change(){
     output.clear();
     oprt.clear();
     change(expression);
 }
-// convert infix expression to postfix 
-// using the shunting-yard algorithm above
+/*
+Function prototype:
+void RPolish::change(std::string exp)
+
+Function description:
+This method converts the infix expression to postfix expression
+
+Example:(Note: This is a private method that need to be called by the public method change())
+RPolish rp;
+rp.setExp("3*2/3");
+rp.change()
+
+Precondition: output and operator stack are empty. The expression is now infix
+Postcondition: output stacks now store the postfix expression and operator stack is empty;
+*/
 void RPolish::change(std::string exp){
     for(int i = 0 ; i < exp.length() ; i++ )
     {

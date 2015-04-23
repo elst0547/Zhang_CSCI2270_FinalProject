@@ -71,7 +71,6 @@ void Zcal::doCalc(string expression){
 //Push the returned results, if any, back onto the stack.
 //If there is only one value in the stack
 //  That value is the result of the calculation.
-
 void Zcal::doCalc(RPolish rpn){
     Stack<string> tempStack = rpn.output;
     while(!tempStack.empty())
