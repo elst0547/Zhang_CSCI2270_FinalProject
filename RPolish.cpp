@@ -109,28 +109,29 @@ void RPolish::change(std::string exp){
     {
         string temp;
         int isNumber = 0;
-        if(exp[i] == ' ')
+        if(exp[i] == ' ') //skip the spaces in your equations
         {
             continue;
         }
         while( (exp[i] >= '0' && exp[i] <= '9') || exp[i] == '.' )
         {
-            temp += exp[i++];
+            temp += exp[i++]; //
             isNumber = 1;
             
         }
         if(temp.empty()){
-            output.push(temp);
+            output.push(temp); // push anything to the stack if stack is currently empty
         }else if(isNumber){
-            output.push(temp);
+            output.push(temp); // always push numbers to the stack;
         }
         if (isOperator(exp[i]))
         {
-            while (!oprt.empty())
+            while (!oprt.empty()) 
             {
                 char theOprt = oprt.top();
                 if(isOperator(theOprt)){
                     int flag = 1;
+                    // see descriptions  above 
                     if (isOperator(theOprt) &&
                         ( (isLeftAssoc(exp[i]) && (optPri(exp[i]) <= optPri(theOprt)) ) ||
                          (!isLeftAssoc(exp[i]) && (optPri(exp[i]) < optPri(theOprt)))))
@@ -149,6 +150,7 @@ void RPolish::change(std::string exp){
             }
             oprt.push(exp[i]);
         }
+        //always push open brickets to the stack
         else if(exp[i] == '(')
         {
             oprt.push(exp[i]);
@@ -179,6 +181,7 @@ void RPolish::change(std::string exp){
         }
         
     }
+    
     while(!oprt.empty()){
         if(oprt.top() == ')' || oprt.top() == '('){
             cout << "Parentheses mismatched" << endl;
