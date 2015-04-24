@@ -56,8 +56,9 @@ void Zcal::doCalc(string expression){
     RPo.change();
     doCalc(RPo);
 };
-// Wikipedia url: 
+// algorithms' wikipedia url: 
 //      http://en.wikipedia.org/wiki/Reverse_Polish_notation
+//
 // using postfix algorithms to do the calculation
 // if the token is a value(number)
 //      push it into the stack
@@ -84,6 +85,7 @@ void Zcal::doCalc(RPolish rpn){
         string numbers = "0123456789.";
         string track = expressionStack.pop();
         int isNumber = 0;
+        //check the value we poped is starting with 0-9
         for(auto i : numbers)
         {
             if(i == track[0])
@@ -101,6 +103,7 @@ void Zcal::doCalc(RPolish rpn){
             {
                 if( calcStack.size() != 1)
                 {
+                    //There should be nothing after '=' signs
                     cout << " ELEMENTS AFTER '=', CHECK THE EXPRESSION" << endl;
                     exit(-1);
                 }else{
@@ -200,5 +203,6 @@ void Zcal::doCalc(RPolish rpn){
         value = stod(calcStack.pop());
         
     }
+    
     cout << "The result is " << value << endl;
 }
