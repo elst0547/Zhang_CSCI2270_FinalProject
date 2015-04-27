@@ -37,11 +37,12 @@ __What happened?__
 
 
 
-    void Zcal::doCalc(string expression){
+    Zcal::Zcal(string expression)
+    {
         RPo.setExp(expression);
         RPo.change();
-        doCalc(RPo);
-    };
+        doCalc();
+    }
     
 
 __See wiki of this project here for public methods:__ [Wiki](https://github.com/Pezhin/Zhang_CSCI2270_FinalProject/wiki)    
