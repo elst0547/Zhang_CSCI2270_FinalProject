@@ -35,11 +35,14 @@ __Looks complicated?__
 __What happened?__
 
 
-        void Zcal::doCalc(string expression){
-            RPo.setExp(expression);
-            RPo.change();
-            doCalc(RPo);
-        };
+
+
+    void Zcal::doCalc(string expression){
+        RPo.setExp(expression);
+        RPo.change();
+        doCalc(RPo);
+    };
+    
 
 __See wiki of this project here for public methods:__ [Wiki](https://github.com/Pezhin/Zhang_CSCI2270_FinalProject/wiki)    
 ####**Dependencies**
