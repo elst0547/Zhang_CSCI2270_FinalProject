@@ -27,10 +27,14 @@ __What happened?__
 First of all, we create a new object whose type is RPolish(defined in RPolish.h). And we set the expression it stores using the method change() which changes the expression "(1+3)*5/2" to "/ 2 * 5 + 3 1" (see details:__ [here](http://en.wikipedia.org/wiki/Reverse_Polish_notation) ). Then we create a new object whose type is Zcal and we call the method doCalc(RPolish) which taking a RPolish object to do calculation.
 
 __Looks complicated?__
+
+
     //Method 2:
     plzstd::Zcal cal1(expression);
 
 __What happened?__
+
+
         void Zcal::doCalc(string expression){
             RPo.setExp(expression);
             RPo.change();
