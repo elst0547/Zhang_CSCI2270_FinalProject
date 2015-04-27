@@ -17,7 +17,12 @@ The executable would ask you to input an expression and would print out the resu
     rp1.setExp(expression);
     rp1.change();
     plzstd::Zcal cal1;
-    cal1.doCalc(rp1)
+    cal1.doCalc(rp1);
+    
+__What happened?__
+
+
+First of all, we create a new object whose type is RPolish(defined in RPolish.h). And we set the expression it stores using the method change() which changes the expression "(1+3)*5/2" to "/ 2 * 5 + 3 1" (see details:__ [here](http://en.wikipedia.org/wiki/Reverse_Polish_notation)
 __See wiki of this project here for public methods:__ [Wiki](https://github.com/Pezhin/Zhang_CSCI2270_FinalProject/wiki)    
 ####**Dependencies**
 We are not using any third-party library. All you need is a c++ compiler that supports the standard libraries and standard template libraries(which the compiler is supposed to). Additionally, I use '**auto**' type specifier which is a C++11 extension to to use the range-based loop. You can modify them to normal for-loop so that you would not need to use c++11;
