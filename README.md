@@ -39,6 +39,7 @@ __What happened?__
 
     Zcal::Zcal(string expression)
     {
+        //RPo is the private member initialized with the class Zcal
         RPo.setExp(expression);
         RPo.change();
         doCalc();
