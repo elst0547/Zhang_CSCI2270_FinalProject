@@ -1,10 +1,12 @@
 # Zhang_CSCI2270_FinalProject
 ####**Project	Summary**
 A calculator that does calculation by converting infix expressions to reverse polish expressions
-The description of the algorithms we use in this project is
+The description of the algorithms we use in this project:
 
 
 [Reverse Polish Notation](http://en.wikipedia.org/wiki/Reverse_Polish_notation)
+
+
 [Shunting-yard algorithm](http://en.wikipedia.org/wiki/Shunting-yard_algorithm)
 ####**How	to	Run**
 There's a test file named main.cpp. Download all the files to the same directory and compile all the files.
