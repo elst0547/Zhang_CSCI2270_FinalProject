@@ -33,7 +33,7 @@ __What happened?__
 
 First of all, we create a new object whose type is RPolish(defined in RPolish.h). And we set the expression it stores using the method change() which changes the expression __"(1+3)*5/2"__ to __"/2*5+31"__ (see details: [here](http://en.wikipedia.org/wiki/Reverse_Polish_notation) ). Then we create a new object whose type is Zcal and we call the method doCalc(RPolish) which takes a RPolish object to do calculation.
 
-__Looks complicated?__
+__Looks complicated? Is there a simple way to do it?__
 
 
     //Method 2:
