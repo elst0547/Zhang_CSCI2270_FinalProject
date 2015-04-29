@@ -23,7 +23,7 @@ Zcal::Zcal(string expression)
 
 //default destructor;
 Zcal::~Zcal(){
-    //DOTO
+
 }
 
 /*
