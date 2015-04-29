@@ -40,7 +40,7 @@ RPolish::RPolish(string exp){
     expression = exp;
 }
 RPolish::~RPolish(){
-//TODO  
+
 }
 void RPolish::setExp(string exp)
 {
