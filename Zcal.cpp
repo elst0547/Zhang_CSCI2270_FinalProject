@@ -76,6 +76,7 @@ void Zcal::doCalc(RPolish rpn){
     Stack<string> tempStack = rpn.output;
     while(!tempStack.empty())
     {
+        //push all the elements in the output stack of RPolish object without changing it
         expressionStack.push(tempStack.pop());
     }
     
@@ -83,23 +84,23 @@ void Zcal::doCalc(RPolish rpn){
     {
         
         string numbers = "0123456789.";
-        string track = expressionStack.pop();
-        int isNumber = 0;
+        string track = expressionStack.pop();//pop an element from the expression stack
+        int isNumber = 0;// flag for checking the pop-up is a number or not;
         //check the value we poped is starting with 0-9
         for(auto i : numbers)
         {
-            if(i == track[0])
+            if(i == track[0]) // if the element starts with 1-9, set the flag to true and break the loop;
             {
-                isNumber = 1;
+                isNumber = 1; 
                 break;
             }
         }
         if(isNumber)
         {
-            calcStack.push(track);
+            calcStack.push(track); //if it's a number, push it to the calculation stack;
             continue;
         }else{
-            if(track == "=")
+            if(track == "=") 
             {
                 if( calcStack.size() != 1)
                 {
@@ -107,7 +108,7 @@ void Zcal::doCalc(RPolish rpn){
                     cout << " ELEMENTS AFTER '=', CHECK THE EXPRESSION" << endl;
                     exit(-1);
                 }else{
-                    value = stod(calcStack.pop());
+                    value = stod(calcStack.pop()); // what in the stack is the result;
                     continue;
                 }
             }
@@ -115,10 +116,12 @@ void Zcal::doCalc(RPolish rpn){
             {
                 if( calcStack.size() < 2)
                 {
-                    cout << "NOT ENOUGH ELEMENTS TO DO CALCULATION, CHEK YOUR EXPRESSION" << endl;
-                    exit(-1);
+                    cout << "NOT ENOUGH ELEMENTS TO DO CALCULATION, CHECK YOUR EXPRESSION" << endl;
+                    exit(-1); // exit the program with an error
                 }else{
+                     // pop 2 numbers from the calculations stack to do sumation
                     double result = sum(stod(calcStack.pop()),stod(calcStack.pop()));
+                    // add the result to our calculations stack;
                     calcStack.push(to_string(result));
                     continue;
                 }
@@ -201,7 +204,6 @@ void Zcal::doCalc(RPolish rpn){
     }
     if(!calcStack.empty()){
         value = stod(calcStack.pop());
-        
     }
     
     cout << "The result is " << value << endl;
