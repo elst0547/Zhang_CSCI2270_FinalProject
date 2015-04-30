@@ -28,7 +28,7 @@ Follwing is the specific instructions using terminal(command line tools)
         make
         
  
- or you can compile with your own compiler ( using g++ as an example)
+ or you can compile with your own compiler __(using g++ as an example)__
  
  
        g++ -std=c++11 main.cpp Zcal.cpp RPolish.cpp
