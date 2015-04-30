@@ -14,11 +14,30 @@ The description of the algorithms we use in this project:
 
 [Shunting-yard algorithm](http://en.wikipedia.org/wiki/Shunting-yard_algorithm)
 ####**How	to	Run**
-There's a test file named main.cpp. Download all the files to the same directory and compile all the files.
+Follwing is the specific instructions using terminal(command line tools)
+1. Download __all__ the files to a directory 
+2. Open your terminal(powershell or commandline)
+3. Change the current directory to the project folder
+4. Enter this command into the terminal(You need a GNU make to do this but it is usually installed already.
+
+
+    make
+
+
+Or you can do this   
+
+
+    g++ -std=c++11 main.cpp Zcal.cpp RPolish.cpp
+5. Run the executable!
+
+
+
+    ./a.out
+    
 The executable would ask you to input an expression and would print out the result of that expression automatically.
 
 
-    g++ -std=c++11 main.cpp Zcal.cpp RPolish.cpp  // this is an example for g++
+
     
 ####**Some examples**####
 
