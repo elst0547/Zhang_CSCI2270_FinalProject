@@ -28,9 +28,10 @@ Or you can do this
 
 
     g++ -std=c++11 main.cpp Zcal.cpp RPolish.cpp
+    
+    
 5. Run the executable!
-
-
+ 
 
     ./a.out
     
