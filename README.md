@@ -29,7 +29,7 @@ Follwing is the specific instructions using terminal(command line tools)
  or you can do
  
  
-    g++ -std=c++11 main.cpp Zcal.cpp RPolish.cpp
+       g++ -std=c++11 main.cpp Zcal.cpp RPolish.cpp
 5. Run the executable!
  
 
