@@ -6,6 +6,8 @@ For any questions, mail me at p@oath.pl
 
 ####**Project	Summary**
 A calculator that does calculation by converting infix expressions to reverse polish expressions
+
+
 The description of the algorithms we use in this project:
 
 
