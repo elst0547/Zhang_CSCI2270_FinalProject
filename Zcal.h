@@ -24,6 +24,7 @@ namespace plzstd{
         inline double divide(double,double);
         inline double power(int, double);
         inline double fact(int);
+        inline double mod(double, double)
     public:
         Zcal();
         Zcal(string expression);

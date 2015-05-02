@@ -47,6 +47,9 @@ inline double Zcal::power(int a, double b){
 inline double Zcal::fact(int a){
     return (a == 1? 1 : a * fact(a-1));
 }
+inline double Zcal::mod(double a, double b){
+    return(fmod(a,b));
+}
 
 void Zcal::doCalc(){
     doCalc(RPo);
